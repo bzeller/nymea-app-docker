@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Nymea-App
+Comment=Dockerized Nymea App
+Exec=/usr/bin/docker start -a nymea-app-docker-app-1
+Terminal=false
+Type=Application
+StartupWMClass=nymea-app
+Categories=Network;Qt;
+X-Desktop-File-Install-Version=0.23

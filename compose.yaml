@@ -12,7 +12,7 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - /run/user/1000/gdm/Xauthority:/home/${USER}/.Xauthority
+      - /run/user/${UID}/gdm/Xauthority:/home/${USER}/.Xauthority
       - ${HOME}/.config/nymea:/home/${USER}/.config/nymea
     network_mode: host
     hostname: ${HOSTNAME}

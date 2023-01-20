@@ -1,4 +1,6 @@
 How to start up the container: 
 - Edit the UID and GID fields in the compose file
-- Run xhost+ on the host to allow X11 apps connecting
+- Use xauth info to figure out which XAuthority file your XOrg is using
+- Make sure to adapt the XAuthority source path in the compose file
 - docker compose up 
+- enjoy

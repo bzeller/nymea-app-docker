@@ -12,7 +12,7 @@ COPY nymea.list /etc/apt/sources.list.d
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key A1A19ED6 \
     && apt-get update \
-    && apt-get install -y nymea-app
+    && apt-get install -y nymea-app xauth
 
 RUN if [ $(getent group  ${GID}) ]; then echo 'group exists.'; else groupadd -g ${GID} ${UNAME}; fi
 

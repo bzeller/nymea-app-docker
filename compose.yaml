@@ -6,8 +6,8 @@ services:
       context: .
       args:
         - UNAME=${USER}
-        - UID=1000
-        - GID=1000
+        - UID=${UID}
+        - GID=${GID}
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
@@ -15,4 +15,5 @@ services:
       - /run/user/${UID}/gdm/Xauthority:/home/${USER}/.Xauthority
       - ${HOME}/.config/nymea:/home/${USER}/.config/nymea
     network_mode: host
+    ipc: host
     hostname: ${HOSTNAME}
